@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>チーム紹介 | 宇部南 ベースボールクラブ</title>
   <style>
     body {
@@ -26,12 +26,31 @@
       color: white;
       margin: 0 1em;
       text-decoration: none;
+      display: inline-block;
+      padding: 10px;
+    }
+    nav a:hover {
+      background-color: #004466; /* リンクにホバー時の色変更 */
     }
     main {
       padding: 2em;
     }
     h2 {
       color: #003366;
+    }
+
+    /* モバイル端末での調整 */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0.5em;
+      }
+      nav a {
+        margin: 0.5em;
+        font-size: 1.2em;
+      }
+      main {
+        padding: 1em;
+      }
     }
   </style>
 </head>
