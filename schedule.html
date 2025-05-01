@@ -20,21 +20,28 @@
     }
 
     nav {
-      background-color: #006699;
-      padding: 1em;
-      text-align: center;
-    }
+  background-color: #006699;
+  padding: 0.5em;
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 
-    nav a {
-      color: white;
-      margin: 0 1em;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5em 1em;
-      border-radius: 5px;
-      background-color: #00557f;
-      display: inline-block;
-    }
+nav a {
+  display: inline-block;
+  color: white;
+  margin: 0 0.3em;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 0.7em;
+  border-radius: 5px;
+  background-color: #00557f;
+  font-size: 0.9em;
+}
+
+nav::-webkit-scrollbar {
+  display: none; /* スクロールバーを非表示（オプション） */
+}
 
     nav a:hover {
       background-color: #007acc;
