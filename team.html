@@ -48,11 +48,11 @@
     h2 {
       color: #003366;
     }
-    @media (max-width: 600px) {
-      .club-name {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+
+@media (max-width: 600px) {
+  header h1 {
+      font-size: clamp(14px, 5vw, 24px); 
+    white-space: nowrap;  
       }
     }
     
