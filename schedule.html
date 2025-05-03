@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>チーム紹介 | 宇部南ベースボールクラブ</title>
+  <title>試合予定 | 宇部南ベースボールクラブ</title>
   <style>
     body {
       margin: 0;
@@ -27,25 +27,34 @@
   white-space: nowrap;
 }
 
-nav a {
-  display: inline-block;
-  color: white;
-  margin: 0 0.3em;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5em 0.7em;
-  border-radius: 5px;
-  background-color: #00557f;
-  font-size: 0.9em;
-}
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
 
-nav::-webkit-scrollbar {
-  display: none; /* スクロールバーを非表示（オプション） */
-}
+    .nav-container a {
+      display: inline-block;
+      background-color: #00557f;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 120px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
-    nav a:hover {
+    .nav-container a:hover {
       background-color: #007acc;
     }
+
+nav::-webkit-scrollbar {
+  display: none; 
+}
 
     main {
       padding: 2em;
@@ -84,12 +93,14 @@ td {
   </header>
 
   <nav>
+  <div class="nav-container">
     <a href="index.html">ホーム</a>
     <a href="team.html">チーム紹介</a>
     <a href="members.html">メンバー紹介</a>
     <a href="schedule.html">試合予定</a>
     <a href="gallery.html">ギャラリー</a>
     <a href="contact.html">お問い合わせ</a>
+  </div>
   </nav>
 
 <main>
@@ -98,15 +109,16 @@ td {
     <table style="margin: 0 auto; border-collapse: collapse; width: 80%;">
       <thead>
         <tr style="background-color: #006699; color: white;">
-          <th style="padding: 0.5em; border: 1px solid #ccc;">日付</th>
-          <th style="padding: 0.5em; border: 1px solid #ccc;">対戦相手</th>
+          <th scope="col" style="padding: 0.5em; border: 1px solid #ccc;">日付</th>
+          <th scope="col" style="padding: 0.5em; border: 1px solid #ccc;">対戦相手</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td style="padding: 0.5em; border: 1px solid #ccc;">5月3日</td>
           <td style="padding: 0.5em; border: 1px solid #ccc;">社会人UBE練習or試合</td>
-        </tr>        <tr>
+        </tr>
+        <tr>
           <td style="padding: 0.5em; border: 1px solid #ccc;">5月18日</td>
           <td style="padding: 0.5em; border: 1px solid #ccc;">宗像ストレイン</td>
         </tr>
@@ -135,4 +147,3 @@ td {
 
 </body>
 </html>
-
