@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>宇部南ベースボールクラブ | ホーム</title>
+
+<meta name="description" content="宇部南ベースボールクラブのギャラリーページです。集合写真、試合風景、練習風景などチームの思い出を掲載しています。">
+<meta name="keywords" content="宇部南ベースボールクラブ,野球,集合写真,試合,練習,中学生,宇部市,軟式野球,少年野球,写真">
+<meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="DPyYO0oXeQZiScFCzaxCerdptiAhS5qHOFmbqV09QHI" />
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header, footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav {
+      background-color: #006699;
+      padding: 1em;
+      text-align: center;
+    }
+
+
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .nav-container a {
+      display: inline-block;
+      background-color: #00557f;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 120px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .nav-container a:hover {
+      background-color: #007acc;
+    }
+
+
+    main {
+      padding: 2em;
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+    }
+    
+@media (max-width: 600px) {
+  header h1 {
+      font-size: clamp(14px, 5vw, 24px); 
+    white-space: nowrap;  
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>宇部南ベースボールクラブ</h1>
+    <p>地域に愛されるチームを目指して！</p>
+  </header>
+
+  <nav>
+  <div class="nav-container">
+    <a href="index.html">ホーム</a>
+    <a href="team.html">チーム紹介</a>
+    <a href="members.html">メンバー紹介</a>
+    <a href="schedule.html">試合予定</a>
+    <a href="gallery.html">ギャラリー</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+  </nav>
+
+  <main>
+
+  <img src="images/imagesphoto3.jpg" alt="チーム写真" style="margin-top: 2em; max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+
+ 
+    <p>◇中学生軟式野球クラブチーム(全日本軟式野球連盟加盟) </p> 
+
+    
+   <p>宇部南ベースボールクラブは、令和7年4月に結成された宇部市を拠点とする軟式野球チームです。</p>
+    <p>初年度は恩田、上宇部、川上、新川、常盤の5地区から18名の選手が集まり活動しています。</p>
+    <p>中学1年生が中心のチームですが、選手、指導者、保護者一丸となって地域に誇れるチーム作りを進めてまいります。
+これから、どうぞよろしくお願いいたします。</p>
+  
+  
+  </main>
+
+  <footer>
+    &copy; 2025 宇部南ベースボールクラブ
+  </footer>
+
+</body>
+</html>
