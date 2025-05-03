@@ -25,18 +25,28 @@
       text-align: center;
     }
 
-    nav a {
-      color: white;
-      margin: 0 1em;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5em 1em;
-      border-radius: 5px;
-      background-color: #00557f;
-      display: inline-block;
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
     }
 
-    nav a:hover {
+    .nav-container a {
+      display: inline-block;
+      background-color: #00557f;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 120px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .nav-container a:hover {
       background-color: #007acc;
     }
 
@@ -115,12 +125,14 @@ button:hover {
   </header>
 
   <nav>
+  <div class="nav-container">
     <a href="index.html">ホーム</a>
     <a href="team.html">チーム紹介</a>
     <a href="members.html">メンバー紹介</a>
     <a href="schedule.html">試合予定</a>
     <a href="gallery.html">ギャラリー</a>
     <a href="contact.html">お問い合わせ</a>
+  </div>
   </nav>
 
 <main>
