@@ -70,6 +70,10 @@
       text-align: left;
       margin-left:200px;
     }
+
+.mobile-br {
+  display: none;
+}
     
 @media (max-width: 1000px) {
     .left-align {
@@ -79,6 +83,14 @@
       font-size: clamp(14px, 5vw, 24px); 
     white-space: nowrap;  
       }
+
+  .mobile-br {
+    display: inline;  
+  }
+      .mobile-space {
+        padding-left: 1.6em;
+      }
+
     }
 
   </style>
@@ -106,8 +118,8 @@
   <img src="images/imagesphoto3.jpg" alt="宇部南ベースボールクラブの集合写真（2025年春）" style="margin-top: 2em; max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
 
 <p class="left-align">
-  ◇中学生軟式野球クラブチーム<br>
-  &nbsp;　　(全日本軟式野球連盟加盟)<br><br>
+  ◇中学生軟式野球クラブチーム<br class="mobile-br">
+   <span class="mobile-space">(全日本軟式野球連盟加盟)</span><br><br>
   宇部南ベースボールクラブは、令和7年4月に結成された宇部市を拠点とする軟式野球チームです。<br><br>
   初年度は恩田、上宇部、川上、新川、常盤の5地区から18名の選手が集まり活動しています。<br><br>
   中学1年生が中心のチームですが、選手、指導者、保護者一丸となって地域に誇れるチーム作りを進めてまいります。<br><br>
