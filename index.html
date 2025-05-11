@@ -54,7 +54,6 @@
       background-color: #007acc;
     }
 
-
     main {
       padding: 2em;
       text-align: center;
@@ -79,16 +78,21 @@
   display: none;
 }
 
-@media (max-width: 1000px) {
-  .header-title {
-    font-size: clamp(16px, 5vw, 22px);
-    white-space: nowrap;
-  }
+    header h1 {
+      font-size: clamp(16px, 5vw, 22px);
+      margin: 0;
+      white-space: nowrap;
+    }
 
+    @media (max-width: 600px) {
   .left-align {
     margin-left: 0;
     margin-right: 0;
   }
+      header h1 {
+        font-size: clamp(14px, 6vw, 18px);
+      }
+    }
 
   .mobile-br {
     display: inline;  
@@ -97,7 +101,6 @@
   .mobile-space {
     padding-left: 1.6em;
   }
-}
 
   </style>
 </head>
@@ -106,7 +109,7 @@
 <header>
   <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
     <img src="images/us-logo.png" alt="宇部南ベースボールクラブのロゴ" style="height: 30px; vertical-align: middle;">
-<h1 class="header-title" style="margin: 0;">宇部南ベースボールクラブ</h1>
+<h1>宇部南ベースボールクラブ</h1>
 
   </div>
   <p>UBESOUTH BASEBALL CLUB</p>
