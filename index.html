@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>宇部南ベースボールクラブ | ホーム</title>
-<meta name="description" content="宇部市を拠点に活動する中学生軟式野球チーム、
-  宇部南ベースボールクラブの公式ホームページです。チーム紹介や活動情報を掲載しています。">
+<meta name="description" content="宇部市を拠点に活動する中学生軟式野球チーム、宇部南ベースボールクラブの公式ホームページです。チーム紹介や活動情報を掲載しています。">
 <meta name="keywords" content="宇部南ベースボールクラブ,野球,集合写真,試合,練習,中学生,宇部市,軟式野球,少年野球,写真">
 <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="DPyYO0oXeQZiScFCzaxCerdptiAhS5qHOFmbqV09QHI" />
   
   <style>
@@ -29,7 +28,6 @@
       padding: 1em;
       text-align: center;
     }
-
 
     .nav-container {
       display: flex;
@@ -77,29 +75,29 @@
   margin-bottom: 0.5em;
 }
 
-
 .mobile-br {
   display: none;
 }
-    
+
 @media (max-width: 1000px) {
-    .left-align {
+  .header-title {
+    font-size: clamp(16px, 5vw, 22px);
+    white-space: nowrap;
+  }
+
+  .left-align {
     margin-left: 0;
     margin-right: 0;
   }
-  header h1 {
-      font-size: clamp(14px, 5vw, 24px); 
-    white-space: nowrap;  
-      }
 
   .mobile-br {
     display: inline;  
   }
-      .mobile-space {
-        padding-left: 1.6em;
-      }
 
-    }
+  .mobile-space {
+    padding-left: 1.6em;
+  }
+}
 
   </style>
 </head>
@@ -108,7 +106,8 @@
 <header>
   <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
     <img src="images/us-logo.png" alt="宇部南ベースボールクラブのロゴ" style="height: 30px; vertical-align: middle;">
-    <h1 style="margin: 0; font-size: 1.8em;">宇部南ベースボールクラブ</h1>
+<h1 class="header-title" style="margin: 0;">宇部南ベースボールクラブ</h1>
+
   </div>
   <p>UBESOUTH BASEBALL CLUB</p>
 </header>
@@ -144,8 +143,6 @@
 <p class="left-align paragraph-tight" style="text-align: right; margin-top: 0.5em;">
   梶矢　淳二
 </p>
-
-
 
   </main>
 
