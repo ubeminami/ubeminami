@@ -71,13 +71,18 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-@media (max-width: 600px) {
-  header h1 {
-      font-size: clamp(14px, 5vw, 24px); 
-    white-space: nowrap;  
+    header h1 {
+      font-size: clamp(16px, 5vw, 22px);
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: clamp(14px, 6vw, 18px);
       }
     }
-    
+
   </style>
 </head>
 <body>
@@ -85,7 +90,7 @@
 <header>
   <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
     <img src="images/us-logo.png" alt="宇部南ベースボールクラブのロゴ" style="height: 30px; vertical-align: middle;">
-    <h1 style="margin: 0; font-size: 1.8em;">宇部南ベースボールクラブ</h1>
+    <h1>宇部南ベースボールクラブ</h1>
   </div>
   <p>UBESOUTH BASEBALL CLUB</p>
 </header>
@@ -111,7 +116,6 @@
 
   </div>
 </main>
-
 
   <footer>
     &copy; 2025 宇部南ベースボールクラブ
