@@ -19,11 +19,24 @@
       padding: 1em;
     }
 
-    nav {
-      background-color: #006699;
-      padding: 1em;
-      text-align: center;
+    header h1 {
+      font-size: clamp(16px, 5vw, 22px);
+      margin: 0;
+      white-space: nowrap;
     }
+
+
+nav {
+  background-color: #006699;
+  padding: 0.5em;
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
 
     .nav-container {
       display: flex;
@@ -71,15 +84,9 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    header h1 {
-      font-size: clamp(16px, 5vw, 22px);
-      margin: 0;
-      white-space: nowrap;
-    }
-
     @media (max-width: 600px) {
       header h1 {
-        font-size: clamp(14px, 6vw, 18px);
+    font-size: clamp(16px, 5vw, 22px);
       }
     }
 
@@ -90,7 +97,7 @@
 <header>
   <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
     <img src="images/us-logo.png" alt="宇部南ベースボールクラブのロゴ" style="height: 30px; vertical-align: middle;">
-    <h1>宇部南ベースボールクラブ</h1>
+    <h1 class="header-title" style="margin: 0;">宇部南ベースボールクラブ</h1>
   </div>
   <p>UBESOUTH BASEBALL CLUB</p>
 </header>
@@ -99,23 +106,42 @@
   <div class="nav-container">
     <a href="index.html">ホーム</a>
     <a href="team.html">チーム紹介</a>
-    <a href="members.html">メンバー紹介</a>
-    <a href="schedule.html">試合予定</a>
+    <a href="calendar.html">予定表</a>
+    <a href="match.html">試合</a>
     <a href="gallery.html">ギャラリー</a>
     <a href="contact.html">お問い合わせ</a>
   </div>
   </nav>
 
 <main>
-  <h2>チームの思い出</h2>
+  <h2>アルバム</h2>
 
   <div class="gallery">
-    <img src="images/photo1.jpg" alt="試合の様子1">
     <img src="images/en.jpg" alt="練習風景">
     <img src="images/-.jpg" alt="集合写真">
+  </div>
 
+  <div style="margin-top: 2em; text-align: center;">
+    <button onclick="checkPassword()">試合の様子1を見る</button>
+
+    <div id="protected-image" style="display: none; margin-top: 1em;">
+      <img src="images/photo1.jpg" alt="試合の様子1" style="max-width: 250px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    </div>
   </div>
 </main>
+
+<script>
+  function checkPassword() {
+    const password = prompt("パスワードを入力してください:");
+    if (password === "2025") {
+      document.getElementById("protected-image").style.display = "block";
+    } else {
+      alert("パスワードが違います。");
+    }
+  }
+</script>
+
+
 
   <footer>
     &copy; 2025 宇部南ベースボールクラブ
