@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>試合予定 | 宇部南ベースボールクラブ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header, footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    header h1 {
+      font-size: clamp(16px, 5vw, 22px);
+      margin: 0;
+      white-space: nowrap;
+    }
+
+nav {
+  background-color: #006699;
+  padding: 0.5em;
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .nav-container a {
+      display: inline-block;
+      background-color: #00557f;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 120px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .nav-container a:hover {
+      background-color: #007acc;
+    }
+
+    main {
+      padding: 2em;
+      text-align: center;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+table {
+  max-width: 100%;
+  width: 100%;
+  table-layout: auto;
+  word-wrap: break-word;
+}
+
+td {
+  width: 90px;
+  word-break: break-word;
+}
+
+td:nth-child(2) {
+  white-space: nowrap;
+}
+
+
+  @media (max-width: 600px) {
+    header h1 {
+    font-size: clamp(16px, 5vw, 22px);
+    }
+
+    main {
+      padding: 1em;
+    }
+
+    table {
+      width: 100% !important;
+      margin: 0 auto;
+    }
+  }
+
+
+</style>
+
+
+
+</head>
+<body>
+
+<header>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <img src="images/us-logo.png" alt="宇部南ベースボールクラブのロゴ" style="height: 30px; vertical-align: middle;">
+    <h1 class="header-title" style="margin: 0;">宇部南ベースボールクラブ</h1>
+  </div>
+  <p>UBESOUTH BASEBALL CLUB</p>
+</header>
+
+  <nav>
+  <div class="nav-container">
+    <a href="index.html">ホーム</a>
+    <a href="team.html">チーム紹介</a>
+    <a href="calendar.html">予定表</a>
+    <a href="match.html">試合</a>
+    <a href="gallery.html">ギャラリー</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+  </nav>
+
+<main>
+  <section>
+    <h2>試合予定</h2>
+    <table style="margin: 0 auto; border-collapse: collapse;">
+      <thead>
+        <tr style="background-color: #006699; color: white;">
+          <th scope="col" style="padding: 0.5em; border: 1px solid #ccc;">日付</th>
+          <th scope="col" style="padding: 0.5em; border: 1px solid #ccc;">対戦相手</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">5月3日</td>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">社会人UBE練習試合</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">5月18日</td>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">宗像ストレイン練習試合</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">5月24日</td>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">ロコモコ練習試合</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">5月31日</td>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">広島サンズ練習試合</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">6月8日</td>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">下関シニア練習試合</td>
+        </tr>
+
+
+      </tbody>
+    </table>
+  </section>
+</main>
+
+  <footer>
+    &copy; 2025 宇部南ベースボールクラブ
+  </footer>
+
+</body>
+</html>
