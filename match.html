@@ -87,11 +87,22 @@ td:nth-child(2) {
   white-space: nowrap;
 }
 
+.br-sp {
+  display: none;
+}
 
   @media (max-width: 600px) {
+  .br-sp {
+    display: inline;
+  }
+  .br-sp::after {
+    content: "\A";
+    white-space: pre;
+  }
     header h1 {
     font-size: clamp(16px, 5vw, 22px);
     }
+}
 
     main {
       padding: 1em;
@@ -101,13 +112,8 @@ td:nth-child(2) {
       width: 100% !important;
       margin: 0 auto;
     }
-  }
-
 
 </style>
-
-
-
 </head>
 <body>
 
@@ -142,14 +148,6 @@ td:nth-child(2) {
       </thead>
       <tbody>
         <tr>
-          <td style="padding: 0.5em; border: 1px solid #ccc;">5月3日</td>
-          <td style="padding: 0.5em; border: 1px solid #ccc;">社会人UBE練習試合</td>
-        </tr>
-        <tr>
-          <td style="padding: 0.5em; border: 1px solid #ccc;">5月18日</td>
-          <td style="padding: 0.5em; border: 1px solid #ccc;">宗像ストレイン練習試合</td>
-        </tr>
-        <tr>
           <td style="padding: 0.5em; border: 1px solid #ccc;">5月24日</td>
           <td style="padding: 0.5em; border: 1px solid #ccc;">ロコモコ練習試合</td>
         </tr>
@@ -161,11 +159,58 @@ td:nth-child(2) {
           <td style="padding: 0.5em; border: 1px solid #ccc;">6月8日</td>
           <td style="padding: 0.5em; border: 1px solid #ccc;">下関シニア練習試合</td>
         </tr>
-
+        <tr>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">6月15日</td>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">末武GRITS練習試合</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">7月6日</td>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">桃山クラブ練習試合</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">7月26日<span class="br-sp"></span>27日</td>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">全国軟式野球大会<span class="br-sp"></span>宇部予選</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">8月9日</td>
+          <td style="padding: 0.5em; border: 1px solid #ccc;">防府ジャイアンツ練習試合</td>
+        </tr>
 
       </tbody>
     </table>
   </section>
+
+<section>
+  <h2>試合結果</h2>
+  <table style="margin: 0 auto; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #006699; color: white;">
+        <th scope="col" style="padding: 0.5em; border: 1px solid #ccc;">日付</th>
+        <th scope="col" style="padding: 0.5em; border: 1px solid #ccc;">対戦相手</th>
+        <th scope="col" style="padding: 0.5em; border: 1px solid #ccc;">スコア</th>
+        <th scope="col" style="padding: 0.5em; border: 1px solid #ccc;">結果</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">5月18日</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">宗像ストレイン練習試</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">―</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">雨天中止</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">5月3日</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">社会人UBE練習試合<span class="br-sp"></span>（第一試合）</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">0 - 5</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">●</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+
 </main>
 
   <footer>
