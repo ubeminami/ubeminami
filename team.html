@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>チーム紹介 | 宇部南ベースボールクラブ</title>
   <style>
     body {
@@ -19,11 +18,23 @@
       padding: 1em;
     }
 
-    nav {
-      background-color: #006699;
-      padding: 1em;
-      text-align: center;
+    header h1 {
+      font-size: clamp(16px, 5vw, 22px);
+      margin: 0;
+      white-space: nowrap;
     }
+
+nav {
+  background-color: #006699;
+  padding: 0.5em;
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
 
     .nav-container {
       display: flex;
@@ -59,50 +70,52 @@
       color: #003366;
     }
 
-    header h1 {
-      font-size: clamp(16px, 5vw, 22px);
-      margin: 0;
-      white-space: nowrap;
-    }
+@media (max-width: 600px) {
+  header h1 {
+    font-size: clamp(16px, 5vw, 22px);
+  }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: clamp(14px, 6vw, 18px);
-      }
-    }
+  main {
+    padding: 1em;
+  }
+}
 
-    
   </style>
 </head>
-<body>
 
+
+<body>
 <header>
   <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-    <img src="images/us-logo.png" alt="宇部南ベースボールクラブのロゴ" style="height: 30px; vertical-align: middle;">
-    <h1>宇部南ベースボールクラブ</h1>
+    <img src="images/us-logo.png" alt="宇部南ベースボールクラブのロゴ" style="height: 30px;width: vertical-align: middle;">
+    <h1 class="header-title" style="margin: 0;">宇部南ベースボールクラブ</h1>
   </div>
   <p>UBESOUTH BASEBALL CLUB</p>
 </header>
 
-  <nav>
-<div class="nav-container">
+<nav>
+  <div class="nav-container">
     <a href="index.html">ホーム</a>
     <a href="team.html">チーム紹介</a>
-    <a href="members.html">メンバー紹介</a>
-    <a href="schedule.html">試合予定</a>
+    <a href="calendar.html">予定表</a>
+    <a href="match.html">試合</a>
     <a href="gallery.html">ギャラリー</a>
     <a href="contact.html">お問い合わせ</a>
   </div>
-  </nav>
+</nav>
+
 
   <main>
     <h2>チーム紹介</h2>
     <p><strong>チーム名：</strong> 宇部南ベースボールクラブ</p>
     <p><strong>結成：</strong> 2025年4月</p>
     <p><strong>拠点：</strong> 山口県宇部市</p>
-    <p><strong>メンバー構成：</strong> 18名の中学生</p>
     <p><strong>練習日：</strong> 月・水・金・土・日</p>
-    <p><strong>チームの目標：</strong> 楽しく、真剣に！技術だけでなく、礼儀やチームワークも大切にしています。</p>
+    <p><strong>監督：</strong> 梶矢</p>
+    <p><strong>コーチ：</strong> 上田、月出</p>
+    <p><strong>主将：</strong> 永島</p>
+    <p><strong>副主将：</strong> 渡邊</p>
+    <p><strong>メンバー構成：</strong> 18名の中学生</p>
   </main>
 
   <footer>
