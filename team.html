@@ -70,6 +70,35 @@ nav::-webkit-scrollbar {
       color: #003366;
     }
 
+.players-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+
+.player-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .players-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+  .player-card {
+    width: 100%; 
+  }
+}
+
 @media (max-width: 600px) {
   .br-sp::after {
     content: "\A";
@@ -120,200 +149,202 @@ nav::-webkit-scrollbar {
 <section>
   <h2>選手紹介</h2>
 
-  <div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
-    <img src="images/player-azuma.jpg" alt="畦森 智晴" style="width: 120px; height: auto; object-fit: cover;">
-    <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">畦森 智晴</a></strong><br>
-      ウネモリ トモハル<br>
-      宇部市立上宇部中学校<br>
-      #1<br>
-    </div>
-  </div>
+  <div class="players-container">
 
-  <div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
-    <img src="images/player-azuma.jpg" alt="中野 颯虎" style="width: 120px; height: auto; object-fit: cover;">
-    <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">中野 颯虎</a></strong><br>
-      ナカノ ハヤト<br>
-      宇部市立西岐波中学校<br>
-      #2<br>
-    </div>
+<div class="player-card">
+  <img src="images/player-azuma.jpg" alt="畦森 智晴" style="width: 120px; height: auto; object-fit: cover;">
+  <div>
+    <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">畦森 智晴</a></strong><br>
+    ウネモリ トモハル<br>
+    宇部市立上宇部中学校<br>
+    #1<br></p>
   </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
+  <img src="images/player-azuma.jpg" alt="中野 颯虎" style="width: 120px; height: auto; object-fit: cover;">
+  <div>
+    <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">中野 颯虎</a></strong><br>
+    ナカノ ハヤト<br>
+    宇部市立西岐波中学校<br>
+    #2<br></p>
+  </div>
+</div>
+
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="幸田 奏汰" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">幸田 奏汰</a></strong><br>
       コウダ カナタ<br>
       宇部市立常盤中学校<br>
-      #3<br>
+      #3<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="荒井 勇人" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">荒井 勇人</a></strong><br>
       アライ ハヤト
       <br>
       宇部市立川上中学校<br>
-      #4<br>
+      #4<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
-    <img src="images/player-azuma.jpg" alt="渡邊 慶佑" style="width: 120px; height: auto; object-fit: cover;">
+<div class="player-card">
+  <img src="images/player-azuma.jpg" alt="渡邊 慶佑" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">渡邊 慶佑</a></strong><br>
       ワタナベ ケイスケ
       <br>
       宇部フロンティア大学付属中学校<br>
-      #5<br>
+      #5<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="永後 柊介" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">永後 柊介</a></strong><br>
       エイゴ　シュウスケ
       <br>
       宇部市立常盤中学校<br>
-      #6<br>
+      #6<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="木村 一稀" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">木村 一稀</a></strong><br>
       キムラ イツキ
       <br>
       宇部市立西岐波中学校<br>
-      #7<br>
+      #7<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
-    <img src="images/player-azuma.jpg" alt="畑山 聡太" style="width: 120px; height: auto; object-fit: cover;">
+<div class="player-card">
+   <img src="images/player-azuma.jpg" alt="畑山 聡太" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">畑山 聡太</a></strong><br>
       ハタヤマ　ソウタ
       <br>
       宇部市立上宇部中学校<br>
-      #8<br>
+      #8<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="佐伯 遥一" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">佐伯 遥一</a></strong><br>
       サエキ ハルイチ
       <br>
       宇部市立常盤中学校<br>
-      #9<br>
+      #9<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="永島 悠斗" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">永島 悠斗</a></strong><br>
       ナガシマ ユウト
       <br>
       宇部市立西岐波中学校<br>
-      #10<br>
+      #10<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="佐々木 蒼空" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">佐々木 蒼空</a></strong><br>
       ササキ ソラ
       <br>
       宇部市立川上中学校<br>
-      #11<br>
+      #11<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="臺 蒼太" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">臺 蒼太</a></strong><br>
       ダイ ソウタ
       <br>
       宇部市立上宇部中学校<br>
-      #12<br>
+      #12<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/ou.jpg" alt="渡壁 凰介" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">渡壁 凰介</a></strong><br>
       ワタカベ オウスケ
       <br>
       宇部市立川上中学校<br>
-      #13<br>
+      #13<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="佐々木 奏空" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">佐々木 奏空</a></strong><br>
       ササキ カナタ
       <br>
       宇部市立常盤中学校<br>
-      #14<br>
+      #14<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="伊藤 光希" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">伊藤 光希</a></strong><br>
       イトウ コウキ
       <br>
       宇部市立常盤中学校<br>
-      #15<br>
+      #15<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="藏座 海嗣" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">藏座 海嗣</a></strong><br>
       ゾウザ カイシ
       <br>
       宇部市立上宇部中学校<br>
-      #16<br>
+      #16<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="島崎 優太郎" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">島崎 優太郎</a></strong><br>
       シマザキ ユウタロウ
       <br>
       宇部市立西岐波中学校<br>
-      #17<br>
+      #17<br></p>
     </div>
-  </div>
+</div>
 
-<div style="border: 1px solid #ccc; background-color: white; padding: 1em; margin-bottom: 1em; display: flex; gap: 1em;">
+<div class="player-card">
     <img src="images/player-azuma.jpg" alt="東田 麻央人" style="width: 120px; height: auto; object-fit: cover;">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">東田 麻央人</a></strong><br>
       ヒガシダ マオト
       <br>
       宇部市立上宇部中学校<br>
-      #18<br>
+      #18<br></p>
     </div>
-  </div>
+</div>
 
 </section>
 
