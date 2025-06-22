@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>体験練習申込み | 宇部南ベースボールクラブ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header, footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    header h1 {
+      font-size: clamp(16px, 5vw, 22px);
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    nav {
+      background-color: #006699;
+      padding: 0.5em;
+      text-align: center;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .nav-container a {
+      display: inline-block;
+      background-color: #00557f;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 120px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .nav-container a:hover {
+      background-color: #007acc;
+    }
+
+    main {
+      padding: 2em;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #003366;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #00557f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #007acc;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 1em;
+        margin: 0 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <img src="images/us-logo.png" alt="宇部南ベースボールクラブのロゴ" style="height: 30px; vertical-align: middle;">
+    <h1 class="header-title" style="margin: 0;">宇部南ベースボールクラブ</h1>
+  </div>
+  <p>UBESOUTH BASEBALL CLUB</p>
+</header>
+
+<nav>
+  <div class="nav-container">
+    <a href="index.html">ホーム</a>
+    <a href="team.html">チーム紹介</a>
+    <a href="calendar.html">予定表</a>
+    <a href="match.html">試合</a>
+    <a href="gallery.html">ギャラリー</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<main>
+  <h2>体験練習申込みフォーム</h2>
+<form id="contact-form" action="https://formspree.io/f/xldbzkgb" method="POST" onsubmit="return validateContactForm()">
+    
+    <fieldset style="border: none; padding: 0;">
+      <legend style="font-weight: bold; margin-bottom: 10px;">保護者氏名（必須）</legend>
+      <label for="parent-last">姓</label>
+      <input type="text" id="parent-last" name="保護者_姓" required>
+      <label for="parent-first">名</label>
+      <input type="text" id="parent-first" name="保護者_名" required>
+    </fieldset>
+
+    <fieldset style="border: none; padding: 0;">
+      <legend style="font-weight: bold; margin-top: 1em;">保護者氏名（カナ）（必須）</legend>
+      <label for="parent-last-kana">セイ</label>
+      <input type="text" id="parent-last-kana" name="保護者_セイ" required>
+      <label for="parent-first-kana">メイ</label>
+      <input type="text" id="parent-first-kana" name="保護者_メイ" required>
+    </fieldset>
+
+    <fieldset style="border: none; padding: 0;">
+      <legend style="font-weight: bold; margin-top: 1em;">選手氏名（必須）</legend>
+      <label for="child-last">姓</label>
+      <input type="text" id="child-last" name="選手_姓" required>
+      <label for="child-first">名</label>
+      <input type="text" id="child-first" name="選手_名" required>
+    </fieldset>
+
+    <fieldset style="border: none; padding: 0;">
+      <legend style="font-weight: bold; margin-top: 1em;">選手氏名（カナ）（必須）</legend>
+      <label for="child-last-kana">セイ</label>
+      <input type="text" id="child-last-kana" name="選手_セイ" required>
+      <label for="child-first-kana">メイ</label>
+      <input type="text" id="child-first-kana" name="選手_メイ" required>
+    </fieldset>
+
+    <label for="grade" style="margin-top: 1em; font-weight: bold;">選手学年（必須）</label>
+    <select id="grade" name="選手学年" required>
+      <option value="">選択してください</option>
+      <option value="小学5年">小学5年</option>
+      <option value="小学6年">小学6年</option>
+    </select>
+
+    <label for="club" style="font-weight: bold;">現在の所属クラブ（必須）</label>
+    <input type="text" id="club" name="所属クラブ" required>
+
+  <label for="email" style="font-weight: bold;">メールアドレス</label>
+  <input type="email" id="email" name="メールアドレス">
+
+  <label for="phone" style="font-weight: bold;">電話番号</label>
+  <input type="tel" id="phone" name="電話番号" pattern="^(\d{2,4}-?\d{2,4}-?\d{3,4}|\d{10,11})$" placeholder="例：09012345678">
+
+    <label for="message" style="font-weight: bold;">お問い合わせ内容 / ご質問など（任意）</label>
+    <textarea id="message" name="メッセージ" rows="4"></textarea>
+
+  <button type="submit">送信</button>
+</form>
+
+<script>
+function validateContactForm() {
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+
+  if (email === '' && phone === '') {
+    alert('メールアドレスか電話番号のどちらか一方を必ずご入力ください。');
+    return false;  // フォーム送信を止める
+  }
+
+  // ここにさらにメールの形式チェックや電話番号の形式チェックを入れてもよい
+
+  return true;  // 問題なければ送信を続行
+}
+</script>
+
+
+
+
+</main>
+
+
+<footer>
+  &copy; 2025 宇部南ベースボールクラブ
+</footer>
+
+</body>
+</html>
