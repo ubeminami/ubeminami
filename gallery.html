@@ -82,6 +82,8 @@ nav::-webkit-scrollbar {
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
     }
 
     @media (max-width: 600px) {
@@ -89,6 +91,25 @@ nav::-webkit-scrollbar {
     font-size: clamp(16px, 5vw, 22px);
       }
     }
+
+button {
+  background-color: #00557f;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #007acc;
+}
+
+
+
+
+
 
   </style>
 </head>
@@ -157,5 +178,4 @@ nav::-webkit-scrollbar {
 
 </body>
 </html>
-
 
