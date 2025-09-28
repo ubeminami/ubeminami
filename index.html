@@ -100,17 +100,28 @@ main img.main-img {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+
+
+/* スマホ用調整 */
 @media (max-width: 600px) {
-  main img.main-img {
-    max-width: 100%; /* スマホで画面いっぱいに */
+  header h1 {
+    white-space: normal; /* 改行を許可 */
+    font-size: 18px;     /* 少し読みやすく */
+  }
+
+  .left-align {
+    margin-left: 1em;  /* スマホでは余白を小さく */
+    margin-right: 1em;
   }
 }
 
+
+    
 
   header h1 {
     font-size: clamp(16px, 5vw, 22px);
   }
-}
+
 
 
   .mobile-br {
@@ -177,5 +188,6 @@ main img.main-img {
 
 </body>
 </html>
+
 
 
