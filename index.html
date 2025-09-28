@@ -97,7 +97,25 @@ main img.main-img {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+
+.br-sp {
+  display: none;
+}
+
+.pc-space {
+  display: inline;  /* PCではスペースを表示 */
+}
+
 @media (max-width: 600px) {
+  .pc-space {
+    display: none;  /* スマホでは非表示 */
+  }
+
+  .br-sp {
+    display: block;
+  }
+
+
   header h1 {
     white-space: normal;
     font-size: 18px;
@@ -115,9 +133,6 @@ main img.main-img {
     max-width: 100%;
   }
 }
-
-
-
 
 
   .mobile-br {
@@ -171,10 +186,8 @@ main img.main-img {
 </p>
 
 <p class="left-align paragraph-tight" style="text-align: right; margin-top: 0.5em; white-space: nowrap;">
- 宇部南ベースボールクラブ監督　 梶矢　淳二
+  宇部南ベースボールクラブ監督<span class="pc-space">&emsp;&emsp;</span><span class="br-sp"></span>梶矢　淳二
 </p>
-
-
 
   </main>
 
