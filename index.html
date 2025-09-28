@@ -92,16 +92,20 @@ nav::-webkit-scrollbar {
 }
 
 
-@media (max-width: 600px) {
-  .left-align {
-    margin-left: 0;
-    margin-right: 0;
-  }
+main img.main-img {
+  margin-top: 2em;
+  max-width: 80%; /* デスクトップ用 */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-  main img {
-    max-width: 100%; 
-    margin-top: 1.5em;
+@media (max-width: 600px) {
+  main img.main-img {
+    max-width: 100%; /* スマホで画面いっぱいに */
   }
+}
+
 
   header h1 {
     font-size: clamp(16px, 5vw, 22px);
@@ -143,7 +147,8 @@ nav::-webkit-scrollbar {
 
   <main>
 
-  <img src="images/20250726.jpg" alt="宇部南ベースボールクラブの集合写真" style="margin-top: 2em; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+ <img src="images/20250726.jpg" alt="宇部南ベースボールクラブの集合写真" class="main-img">
+
 
 <p class="left-align paragraph-tight">
   &emsp;この度、令和7年4月に中学軟式野球チーム「宇部南ベースボールクラブ」を結成致しました。
@@ -172,9 +177,4 @@ nav::-webkit-scrollbar {
 
 </body>
 </html>
-
-
-
-
-
 
