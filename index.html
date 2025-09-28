@@ -87,9 +87,6 @@ nav::-webkit-scrollbar {
   margin-bottom: 0.5em;
 }
 
-.mobile-br {
-  display: none;
-}
 
 
 main img.main-img {
@@ -100,27 +97,26 @@ main img.main-img {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-
-
-/* スマホ用調整 */
 @media (max-width: 600px) {
   header h1 {
-    white-space: normal; /* 改行を許可 */
-    font-size: 18px;     /* 少し読みやすく */
+    white-space: normal;
+    font-size: 18px;
   }
 
   .left-align {
-    margin-left: 1em;  /* スマホでは余白を小さく */
+    margin-left: 1em;
     margin-right: 1em;
+  }
+
+  .mobile-br { display: inline; }
+
+  /* スマホでは写真を大きく */
+  main img.main-img {
+    max-width: 100%;
   }
 }
 
 
-    
-
-  header h1 {
-    font-size: clamp(16px, 5vw, 22px);
-  }
 
 
 
@@ -188,6 +184,5 @@ main img.main-img {
 
 </body>
 </html>
-
 
 
