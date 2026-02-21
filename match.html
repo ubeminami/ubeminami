@@ -91,6 +91,20 @@ td:nth-child(2) {
   display: none;
 }
 
+
+/* 初期（スマホ）では何も表示しない */
+.pc-add::after {
+  content: "";
+}
+
+/* PCのときだけ追加 */
+@media (min-width: 601px) {
+  .pc-add::after {
+    content: "争奪チャンピオン大会";
+  }
+}
+
+
   @media (max-width: 600px) {
   .br-sp {
     display: inline;
@@ -197,8 +211,6 @@ td:nth-child(2) {
           <td style="padding: 0.5em; border: 1px solid #ccc;">YSベースボール</td>
         </tr>
 
-      
-        
       </tbody>
     </table>
   </section>
@@ -230,25 +242,25 @@ td:nth-child(2) {
     </tr>      
    <tr>
         <td style="padding: 0.5em; border: 1px solid #ccc;">2月15日</td>
-        <td style="padding: 0.5em; border: 1px solid #ccc;">第5回広島サンズ旗<span class="br-sp"></span> 三和クラブ(決勝)</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">第5回広島サンズ旗<span class="pc-add"></span><span class="br-sp"></span> 三和クラブ(決勝)</td>
         <td style="padding: 0.5em; border: 1px solid #ccc;">2 - 3</td>
         <td style="padding: 0.5em; border: 1px solid #ccc;">準優勝</td>
     </tr>      
    <tr>
         <td style="padding: 0.5em; border: 1px solid #ccc;">2月15日</td>
-        <td style="padding: 0.5em; border: 1px solid #ccc;">第5回広島サンズ旗<span class="br-sp"></span> 大野シニアBBC(準決勝)</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">第5回広島サンズ旗<span class="pc-add"></span><span class="br-sp"></span> 大野シニアBBC(準決勝)</td>
         <td style="padding: 0.5em; border: 1px solid #ccc;">1 - 0</td>
         <td style="padding: 0.5em; border: 1px solid #ccc;">◯</td>
     </tr>      
    <tr>
         <td style="padding: 0.5em; border: 1px solid #ccc;">2月14日</td>
-        <td style="padding: 0.5em; border: 1px solid #ccc;">第5回広島サンズ旗<span class="br-sp"></span> 三原浮城BBC(C組1位)</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">第5回広島サンズ旗<span class="pc-add"></span><span class="br-sp"></span> 三原浮城BBC(C組1位)</td>
         <td style="padding: 0.5em; border: 1px solid #ccc;">7 - 7</td>
         <td style="padding: 0.5em; border: 1px solid #ccc;">抽選◯</td>
     </tr>      
    <tr>
         <td style="padding: 0.5em; border: 1px solid #ccc;">2月14日</td>
-        <td style="padding: 0.5em; border: 1px solid #ccc;">第5回広島サンズ旗<span class="br-sp"></span> 広島レイワンズBBC</td>
+        <td style="padding: 0.5em; border: 1px solid #ccc;">第5回広島サンズ旗<span class="pc-add"></span><span class="br-sp"></span> 広島レイワンズBBC</td>
         <td style="padding: 0.5em; border: 1px solid #ccc;">4 - 2</td>
         <td style="padding: 0.5em; border: 1px solid #ccc;">◯</td>
     </tr>      
@@ -881,7 +893,6 @@ td:nth-child(2) {
   </table>
 </section>
 
-
 </main>
 
   <footer>
@@ -890,8 +901,3 @@ td:nth-child(2) {
 
 </body>
 </html>
-
-
-
-
-
