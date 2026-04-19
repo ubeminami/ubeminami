@@ -89,8 +89,9 @@ nav::-webkit-scrollbar {
   box-sizing: border-box;
 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+align-items: center;
 }
-
+    
 .player-card img {
   width: 120px;
   height: 120px;
@@ -98,20 +99,19 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
-@media (min-width: 768px) {
-  .players-container {
-    grid-template-columns: repeat(3, 1fr);
-}
-  .player-card {
-    width: 100%; 
-  }
+.br-sp {
+  display: none;
 }
 
 @media (max-width: 600px) {
+  .br-sp {
+    display: inline;
+  }
   .br-sp::after {
     content: "\A";
     white-space: pre;
   }
+
   header h1 {
     font-size: clamp(16px, 5vw, 22px);
   }
@@ -123,7 +123,14 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   .team-info {
     padding-left: 1em;
   }
-
+}
+@media (min-width: 768px) {
+  .players-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+  .player-card {
+    width: 100%; 
+  }
 }
 
 .team-info {
@@ -134,9 +141,12 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
 .player-card > div {
   text-align: center;
+flex: 1;
 }
 
-
+.player-card p {
+  line-height: 1.6;
+}
 
 .back-link {
   margin: 2em auto 0;
@@ -156,11 +166,6 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 .back-link a:hover {
   background-color: #007acc;
 }
-
-
-
-
-
 
   </style>
 </head>
