@@ -87,10 +87,26 @@ nav::-webkit-scrollbar {
   width: 100%;
   max-width: 600px;
   box-sizing: border-box;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+
+  /* 追加部分 */
+  align-items: center;
 }
-    
+
+.player-card > div {
+  text-align: center;
+  width: 100%;
+}
+
+.player-card p {
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+
 .player-card img {
   width: 120px;
   height: 120px;
@@ -102,10 +118,18 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   display: none;
 }
 
+
+
 @media (max-width: 600px) {
+  .player-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .br-sp {
     display: inline;
   }
+
   .br-sp::after {
     content: "\A";
     white-space: pre;
@@ -123,13 +147,14 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding-left: 1em;
   }
 }
+
+
+
 @media (min-width: 768px) {
   .players-container {
     grid-template-columns: repeat(3, 1fr);
 }
-  .player-card {
-    width: 100%; 
-  }
+
 }
 
 .team-info {
@@ -138,13 +163,7 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin: 0 auto 2em auto;
 }
 
-.player-card > div {
-  text-align: center;
-}
 
-.player-card p {
-  line-height: 1.6;
-}
 
 .back-link {
   margin: 2em auto 0;
