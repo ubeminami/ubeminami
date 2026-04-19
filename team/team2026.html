@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>選手紹介（2026年度・2期生） | 宇部南ベースボールクラブ</title>
 
-  <style>
+ <style>
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
@@ -129,7 +129,7 @@ align-items: center;
     grid-template-columns: repeat(3, 1fr);
 }
   .player-card {
-    width: 100%; 
+    max-width: none; 
   }
 }
 
@@ -167,7 +167,18 @@ flex: 1;
   background-color: #007acc;
 }
 
+.player-card a {
+  pointer-events: none;
+  cursor: default;
+}
+
+.player-name {
+  color: #0033cc;
+  font-weight: bold;
+}
+
   </style>
+
 </head>
 
 
