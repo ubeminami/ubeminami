@@ -129,7 +129,7 @@ align-items: center;
     grid-template-columns: repeat(3, 1fr);
 }
   .player-card {
-    width: 100%; 
+    max-width: none; 
   }
 }
 
@@ -167,6 +167,16 @@ flex: 1;
   background-color: #007acc;
 }
 
+.player-card a {
+  pointer-events: none;
+  cursor: default;
+}
+
+.player-name {
+  color: #0033cc;
+  font-weight: bold;
+}
+
   </style>
 </head>
 
@@ -198,7 +208,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/10yuuto.jpg" alt="永島 悠斗">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">永島 悠斗</a></strong><br>
+      <p><strong class="player-name">永島 悠斗</strong><br>
       ナガシマ ユウト
       <br>
       西岐波中学校<br>
@@ -209,7 +219,7 @@ flex: 1;
 <div class="player-card">
   <img src="../images/member2025/1tomoharu.jpg" alt="畦森 智晴">
   <div>
-    <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">畦森 智晴</a></strong><br>
+      <p><strong class="player-name">畦森 智晴</strong><br>
     ウネモリ トモハル<br>
     上宇部中学校<br>
     #1(#44)<br></p>
@@ -219,7 +229,7 @@ flex: 1;
 <div class="player-card">
   <img src="../images/member2025/2hayato.jpg" alt="中野 颯虎">
   <div>
-    <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">中野 颯虎</a></strong><br>
+    <p><strong class="player-name">中野 颯虎</strong><br>
     ナカノ ハヤト<br>
     西岐波中学校<br>
     #2(#27)<br></p>
@@ -229,7 +239,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/3kanata.jpg" alt="幸田 奏汰">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">幸田 奏汰</a></strong><br>
+      <p><strong class="player-name">幸田 奏汰</strong><br>
       コウダ カナタ<br>
       常盤中学校<br>
       #3(#5)<br></p>
@@ -239,7 +249,7 @@ flex: 1;
 <div class="player-card">
   <img src="../images/member2025/5keisuke.jpg" alt="渡邊 慶祐">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">渡邊 慶祐</a></strong><br>
+      <p><strong class="player-name">渡邊 慶祐</strong><br>
       ワタナベ ケイスケ
       <br>
       宇部フロンティア大学<span class="br-sp"></span>付属中学校<br>
@@ -250,7 +260,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/14kanata.jpg" alt="佐々木 奏空">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">佐々木 奏空</a></strong><br>
+      <p><strong class="player-name">佐々木 奏空</strong><br>
       ササキ カナタ
       <br>
       常盤中学校<br>
@@ -261,7 +271,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/6syuusuke.jpg" alt="永後 柊介">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">永後 柊介</a></strong><br>
+      <p><strong class="player-name">永後 柊介</strong><br>
       エイゴ　シュウスケ
       <br>
       常盤中学校<br>
@@ -272,7 +282,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/9haruichi.jpg" alt="佐伯 遥一">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">佐伯 遥一</a></strong><br>
+      <p><strong class="player-name">佐伯 遥一</strong><br>
       サエキ ハルイチ
       <br>
       西岐波中学校<br>
@@ -283,7 +293,7 @@ flex: 1;
 <div class="player-card">
    <img src="../images/member2025/8souta.jpg" alt="畑山 聡太">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">畑山 聡太</a></strong><br>
+      <p><strong class="player-name">畑山 聡太</strong><br>
       ハタヤマ　ソウタ
       <br>
       上宇部中学校<br>
@@ -294,7 +304,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/13ousuke.jpg" alt="渡壁 凰介">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">渡壁 凰介</a></strong><br>
+      <p><strong class="player-name">渡壁 凰介</strong><br>
       ワタカベ オウスケ
       <br>
       川上中学校<br>
@@ -305,7 +315,7 @@ flex: 1;
  <div class="player-card">
     <img src="../images/member2025/18maoto.jpg" alt="東田 麻央人">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">東田 麻央人</a></strong><br>
+      <p><strong class="player-name">東田 麻央人</strong><br>
       ヒガシダ マオト
       <br>
       上宇部中学校<br>
@@ -316,7 +326,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/16kaishi.jpg" alt="蔵座 海嗣">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">蔵座 海嗣</a></strong><br>
+      <p><strong class="player-name">蔵座 海嗣</strong><br>
       ゾウザ カイシ
       <br>
       上宇部中学校<br>
@@ -327,7 +337,7 @@ flex: 1;
     <div class="player-card">
     <img src="../images/member2025/15kouki.jpg" alt="伊藤 光希">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">伊藤 光希</a></strong><br>
+      <p><strong class="player-name">伊藤 光希</strong><br>
       イトウ コウキ
       <br>
       常盤中学校<br>
@@ -338,7 +348,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/4hayato.jpg" alt="荒井 勇人">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">荒井 勇人</a></strong><br>
+      <p><strong class="player-name">荒井 勇人</strong><br>
       アライ ハヤト
       <br>
       川上中学校<br>
@@ -349,7 +359,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/17yuutarou.jpg" alt="島崎 優太郎">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">島崎 優太郎</a></strong><br>
+      <p><strong class="player-name">島崎 優太郎</strong><br>
       シマザキ ユウタロウ
       <br>
       西岐波中学校<br>
@@ -360,7 +370,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/7ituki.jpg" alt="木村 一稀">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">木村 一稀</a></strong><br>
+      <p><strong class="player-name">木村 一稀</strong><br>
       キムラ イツキ
       <br>
       常盤中学校<br>
@@ -371,7 +381,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/12souta.jpg" alt="臺 蒼太">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">臺 蒼太</a></strong><br>
+      <p><strong class="player-name">臺 蒼太</strong><br>
       ダイ ソウタ
       <br>
       上宇部中学校<br>
@@ -382,7 +392,7 @@ flex: 1;
 <div class="player-card">
     <img src="../images/member2025/11sora.jpg" alt="佐々木 蒼空">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">佐々木 蒼空</a></strong><br>
+      <p><strong class="player-name">佐々木 蒼空</strong><br>
       ササキ ソラ
       <br>
       川上中学校<br>
@@ -393,7 +403,7 @@ flex: 1;
     <div class="player-card">
     <img src="../images/member2025/20raiki.jpg" alt="岡田 頼樹">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">岡田 頼樹</a></strong><br>
+      <p><strong class="player-name">岡田 頼樹</strong><br>
       オカダ ライキ
       <br>
       藤山中学校<br>
@@ -404,7 +414,7 @@ flex: 1;
     <div class="player-card">
     <img src="../images/member2025/19kenta.jpg" alt="重兼 健太">
     <div>
-      <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">重兼 健太</a></strong><br>
+      <p><strong class="player-name">重兼 健太</strong><br>
       シゲカネ ケンタ
       <br>
       厚狭中学校<br>
