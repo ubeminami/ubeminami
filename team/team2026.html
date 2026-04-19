@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>選手紹介（2026年度・2期生） | 宇部南ベースボールクラブ</title>
 
-  <style>
+   <style>
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
@@ -87,9 +87,25 @@ nav::-webkit-scrollbar {
   width: 100%;
   max-width: 600px;
   box-sizing: border-box;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+
+  /* 追加部分 */
+  align-items: center;
 }
+
+.player-card > div {
+  text-align: center;
+  width: 100%;
+}
+
+.player-card p {
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+}
+
+
 
 .player-card img {
   width: 120px;
@@ -98,20 +114,27 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
-@media (min-width: 768px) {
-  .players-container {
-    grid-template-columns: repeat(3, 1fr);
-}
-  .player-card {
-    width: 100%; 
-  }
+.br-sp {
+  display: none;
 }
 
+
+
 @media (max-width: 600px) {
+  .player-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .br-sp {
+    display: inline;
+  }
+
   .br-sp::after {
     content: "\A";
     white-space: pre;
   }
+
   header h1 {
     font-size: clamp(16px, 5vw, 22px);
   }
@@ -123,6 +146,14 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   .team-info {
     padding-left: 1em;
   }
+}
+
+
+
+@media (min-width: 768px) {
+  .players-container {
+    grid-template-columns: repeat(3, 1fr);
+}
 
 }
 
@@ -130,10 +161,6 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
   max-width: 600px;
   margin: 0 auto 2em auto;
-}
-
-.player-card > div {
-  text-align: center;
 }
 
 
@@ -156,11 +183,6 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 .back-link a:hover {
   background-color: #007acc;
 }
-
-
-
-
-
 
   </style>
 </head>
@@ -198,7 +220,7 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   <div>
     <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">梶矢 悠輝</a></strong><br>
     カジヤ　ユウキ<br>
-    西岐波中学校<br>
+    宇部市立 西岐波中学校<br>
     #(#89)<br></p>
   </div>
 </div>
@@ -209,7 +231,7 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">梶矢 晴輝</a></strong><br>
       カジヤ　ハルキ
       <br>
-      西岐波中学校<br>
+      宇部市立 西岐波中学校<br>
       #(#00)<br></p>
     </div>
 </div>
@@ -220,8 +242,8 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">粟屋 來</a></strong><br>
       アワヤ　ライ
       <br>
-      上宇部中学校<br>
-      #21(#67)<br></p>
+      宇部市立 上宇部中学校<br>
+      #(#67)<br></p>
     </div>
 </div>
 
@@ -231,7 +253,7 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">上田 純</a></strong><br>
       ウエダ　ジュン
       <br>
-      川上中学校<br>
+      宇部市立 川上中学校<br>
       #(#9)<br></p>
     </div>
 </div>
@@ -242,7 +264,7 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">齋藤 涼太</a></strong><br>
       サイトウ　リョウタ
       <br>
-      上宇部中学校<br>
+      宇部市立 上宇部中学校<br>
       #(#22)<br></p>
     </div>
 </div>
@@ -253,7 +275,7 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">福富 希翔</a></strong><br>
       フクトミ　リヒト
       <br>
-      黒石中学校<br>
+      宇部市立 黒石中学校<br>
       #(#4)<br></p>
     </div>
 </div>
@@ -264,7 +286,7 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">磯元 大夢</a></strong><br>
       イソモト　ヒロム
       <br>
-      東岐波中学校<br>
+      宇部市立 東岐波中学校<br>
       #(#56)<br></p>
     </div>
 </div>
@@ -275,7 +297,7 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">三國 哲史</a></strong><br>
       ミクニ　テツジ
       <br>
-      厚南中学校<br>
+      宇部市立 厚南中学校<br>
       #(#62)<br></p>
     </div>
 </div>
@@ -286,29 +308,29 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">瀧口 泰史郎</a></strong><br>
       タキグチ　タイシロウ
       <br>
-      西岐波中学校<br>
+      宇部市立 西岐波中学校<br>
       #(#84)<br></p>
     </div>
 </div>
 
-    <div class="player-card">
+          <div class="player-card">
     <img src="../images/member2026/2rouri.jpg" alt="石橋 楼理">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">石橋 楼理</a></strong><br>
       イシバシ　ロウリ
       <br>
-      西岐波中学校<br>
+      宇部市立 西岐波中学校<br>
       #(#2)<br></p>
     </div>
 </div>
 
-  <div class="player-card">
+          <div class="player-card">
     <img src="../images/member2026/3syouya.jpg" alt="國本 翔弥">
     <div>
       <p><strong><a href="#" style="color: #0033cc; text-decoration: none;">國本 翔弥</a></strong><br>
       クニモト　ショウヤ
       <br>
-     上宇部中学校<br>
+      宇部市立 上宇部中学校<br>
       #(#3)<br></p>
     </div>
 </div>
