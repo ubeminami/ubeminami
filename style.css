@@ -1,7 +1,475 @@
-body {
-    background-color: #f5f5f5;
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header, footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    header h1 {
+      font-size: clamp(16px, 5vw, 22px);
+      margin: 0;
+      white-space: nowrap;
+    }
+
+nav {
+  background-color: #006699;
+  padding: 0.5em;
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
-h1 {
-    color: blue;
+nav::-webkit-scrollbar {
+  display: none;
 }
+
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .nav-container a {
+      display: inline-block;
+      background-color: #00557f;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 120px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .nav-container a:hover {
+      background-color: #007acc;
+    }
+
+    main {
+      padding: 2em;
+      text-align: center;
+    }
+
+
+
+
+.left-align {
+  text-align: left;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.paragraph-tight {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+
+
+main img.main-img {
+  margin-top: 2em;
+  max-width: 40%; /* デスクトップ用 */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.br-sp {
+  display: none;
+}
+
+.pc-space {
+  display: inline;  /* PCではスペースを表示 */
+}
+
+@media (max-width: 600px) {
+  .pc-space {
+    display: none;  /* スマホでは非表示 */
+  }
+
+  .br-sp {
+    display: block;
+  }
+
+
+  header h1 {
+    white-space: normal;
+    font-size: 18px;
+  }
+
+  .left-align {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .mobile-br { display: inline; }
+
+  /* スマホでは写真を大きく */
+  main img.main-img {
+    max-width: 100%;
+  }
+}
+
+
+  .mobile-br {
+    display: inline;  
+  }
+
+  .mobile-space {
+    padding-left: 1.6em;
+  }
+
+
+
+
+.instagram-section {
+  margin: 3em auto;
+  max-width: 600px;
+}
+
+.instagram-section h2 {
+  color: #003366;
+  margin-bottom: 1em;
+}
+
+.instagram-media {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+h2 {
+  color: #003366;
+}
+
+@media (max-width: 600px) {
+  iframe {
+    display: none;
+  }
+
+  main {
+    padding: 1em;
+  }
+}
+
+
+/* ===== お問い合わせページ ===== */
+
+
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: #444;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+/* ===== 試合結果ページ ===== */
+
+.year-links {
+  margin-top: 20px;
+}
+
+.year-links a {
+  display: block;
+  margin: 10px auto;
+  padding: 12px;
+  background: #006699;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  max-width: 260px;
+  font-weight: bold;
+}
+
+.year-links a:hover {
+  background: #004d73;
+}
+
+
+/* ===== お知らせページ ===== */
+
+.news-list {
+  list-style: none;
+  padding: 0;
+}
+
+.news-list li {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.news-list li span {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00557f;
+  margin-bottom: 8px;
+  border-left: 4px solid #d9534f;
+  padding-left: 8px;
+}
+
+.news-list li p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.highlight-win {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d9534f;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #fff3cd;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+/* ===== チーム紹介ページ ===== */
+
+.players-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+
+.player-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .players-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .player-card {
+    width: 100%;
+  }
+}
+
+.year-select {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.year-card {
+  display: block;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.year-card span {
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
+  color: #555;
+  margin-top: 6px;
+}
+
+.year-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.team-info {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 2em auto;
+}
+
+.player-card > div {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .br-sp::after {
+    content: "\A";
+    white-space: pre;
+  }
+
+  .team-info {
+    padding-left: 1em;
+  }
+}
+
+
+.form-page {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 2em;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+@media (max-width: 600px) {
+  .form-page {
+    margin: 1em;
+    padding: 1em;
+  }
+}
+
+
+/* ===== 2025年度 試合結果ページ ===== */
+
+table {
+  max-width: 100%;
+  width: 100%;
+  table-layout: auto;
+  word-wrap: break-word;
+}
+
+td {
+  width: 90px;
+  word-break: break-word;
+}
+
+td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.pc-add::after {
+  content: "";
+}
+
+@media (min-width: 601px) {
+  .pc-add::after {
+    content: "争奪チャンピオン大会";
+    margin-right: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .br-sp {
+    display: inline;
+  }
+
+  .br-sp::after {
+    content: "\A";
+    white-space: pre;
+  }
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.back-link {
+  margin: 2em auto 0;
+  text-align: center;
+}
+
+.back-link a {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #00557f;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.back-link a:hover {
+  background-color: #007acc;
+}
+
+
+/* ===== 体験練習申込みフォーム ===== */
+
+.form-page label {
+  display: block;
+  margin-top: 15px;
+  color: #444;
+  text-align: left;
+}
+
+.form-page input,
+.form-page select,
+.form-page textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form-page button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #00557f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-page button:hover {
+  background-color: #007acc;
+}
+
