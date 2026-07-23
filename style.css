@@ -162,6 +162,7 @@ h2 {
 
   main {
     padding: 1em;
+    text-align: center;
   }
 }
 
@@ -325,6 +326,7 @@ align-items: center;
 
   main {
     padding: 1em;
+    text-align: center;
   }
 
   .team-info {
