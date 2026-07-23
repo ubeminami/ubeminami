@@ -216,6 +216,7 @@ button:hover {
   font-size: 16px;
   max-width: 260px;
   font-weight: bold;
+  text-align: center;   /* ←追加 */
 }
 
 .year-links a:hover {
