@@ -59,6 +59,7 @@ main {
   padding: 2em;
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 
@@ -151,6 +152,7 @@ main img.main-img {
 
 h2 {
   color: #003366;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
