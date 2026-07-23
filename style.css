@@ -76,6 +76,8 @@ main {
 
 
 main img.main-img {
+  display: block;
+  margin: 2em auto;
   margin-top: 2em;
   max-width: 40%; /* デスクトップ用 */
   height: auto;
