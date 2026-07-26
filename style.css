@@ -389,7 +389,7 @@ button:hover {
 
 
 
-/* ===== 2025年度 試合結果ページ ===== */
+/* ===== 2025、2026年度 試合結果ページ ===== */
 
 table {
   max-width: 100%;
@@ -401,6 +401,8 @@ table {
 td {
   width: 90px;
   word-break: break-word;
+  text-align: center;
+  vertical-align: middle;
 }
 
 td:nth-child(2) {
