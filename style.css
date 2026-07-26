@@ -79,7 +79,7 @@ main img.main-img {
   display: block;
   margin: 2em auto;
   margin-top: 2em;
-  max-width: 80%; /* デスクトップ用 */
+  max-width: 60%; /* デスクトップ用 */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
