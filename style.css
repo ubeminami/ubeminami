@@ -351,7 +351,6 @@ align-items: center;
 
 .player-card > div {
   text-align: center;
-flex: 1;
 }
 
 .player-card p {
