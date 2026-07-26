@@ -167,6 +167,13 @@ h2 {
 
 
 
+/* ===== 予定表ページ ===== */
+
+.calendar-info {
+  text-align: center;
+}
+
+
 /* ===== お問い合わせページ ===== */
 
 .container {
