@@ -65,8 +65,8 @@ main {
 
 .left-align {
   text-align: left;
-  margin-left: 200px;
-  margin-right: 200px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .paragraph-tight {
@@ -80,7 +80,7 @@ main img.main-img {
   display: block;
   margin: 2em auto;
   margin-top: 2em;
-  max-width: 40%; /* デスクトップ用 */
+  max-width: 80%; /* デスクトップ用 */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -305,6 +305,7 @@ align-items: center;
   object-fit: cover;
   border-radius: 8px;
 }
+
 
 .br-sp {
   display: none;
@@ -532,4 +533,3 @@ td:nth-child(2) {
   color: #666;
   font-weight: normal;
 }
-
