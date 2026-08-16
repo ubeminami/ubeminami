@@ -542,3 +542,58 @@ td:nth-child(2) {
   color: #666;
   font-weight: normal;
 }
+
+/* ===== トップページ 最新のお知らせ ===== */
+
+.home-news {
+  max-width: 800px;
+  margin: 25px auto 35px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.home-news h2 {
+  text-align: center;
+  color: #003366;
+  margin: 0 0 15px;
+}
+
+.news-item {
+  padding: 10px 5px;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.6;
+}
+
+.news-item span {
+  display: inline-block;
+  margin-right: 15px;
+  color: #555;
+}
+
+.news-item a {
+  color: #00557f;
+  text-decoration: none;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+.more-link {
+  text-align: right;
+  margin: 15px 0 0;
+}
+
+.more-link a {
+  color: #00557f;
+  text-decoration: none;
+}
+
+.more-link a:hover {
+  text-decoration: underline;
+}
+
+
