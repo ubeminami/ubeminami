@@ -598,6 +598,7 @@ td:nth-child(2) {
   }
   .news-item {
     padding: 10px 0;
+    text-align: left;   /* ←これを追加 */
   }
   .news-item span {
     display: block;
