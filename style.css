@@ -135,13 +135,19 @@ main img.main-img {
 
 
 .instagram-section {
-  margin: 3em auto;
-  max-width: 600px;
+  max-width: 800px;
+  margin: 25px auto 35px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .instagram-section h2 {
+  text-align: center;
   color: #003366;
-  margin-bottom: 1em;
+  margin: 0 0 15px;
 }
 
 .instagram-media {
@@ -149,16 +155,13 @@ main img.main-img {
   width: 100% !important;
 }
 
+
 h2 {
   color: #003366;
   text-align: center;
 }
 
 @media (max-width: 600px) {
-  iframe {
-    display: none;
-  }
-
   main {
     padding: 1em;
     text-align: center;
@@ -543,6 +546,7 @@ td:nth-child(2) {
   font-weight: normal;
 }
 
+
 /* ===== トップページ 最新のお知らせ ===== */
 
 .home-news {
@@ -587,7 +591,6 @@ td:nth-child(2) {
 .more-link a:hover {
   text-decoration: underline;
 }
-
 @media (max-width: 600px) {
   .home-news {
     margin: 20px 10px 30px;
@@ -613,6 +616,14 @@ td:nth-child(2) {
     margin-top: 12px;
   }
 }
-
+@media (max-width: 600px) {
+  .instagram-section {
+    margin: 20px 10px 30px;
+    padding: 15px;
+  }
+  .instagram-section h2 {
+    font-size: 20px;
+  }
+}
 
 
