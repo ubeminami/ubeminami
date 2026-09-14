@@ -504,6 +504,16 @@ td:nth-child(2) {
   background-color: #007acc;
 }
 
+.form-page {
+  max-width: 800px;
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
 
 /* ===== 年度選択 共通 ===== */
@@ -626,15 +636,5 @@ td:nth-child(2) {
   }
 }
 
-/* ===== 体験練習申込みフォーム 全体 ===== */
 
-.form-page {
-  max-width: 800px;
-  width: calc(100% - 40px);
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+
