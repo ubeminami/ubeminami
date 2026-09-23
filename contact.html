@@ -22,7 +22,7 @@
   <div class="nav-container">
     <a href="index.html">ホーム</a>
     <a href="team.html">チーム紹介</a>
-    <a href="members.html">予定表</a>
+    <a href="calendar.html">予定表</a>
     <a href="match.html">試合</a>
     <a href="news.html">お知らせ</a>
     <a href="contact.html">お問い合わせ</a>
@@ -33,7 +33,7 @@
 
   <div class="container">
       <h1>お問い合わせ</h1>
-    <form action="https://formspree.io/f/xldbzkgb" method="POST">
+  <form id="contact-form">
       
       <label for="name">お名前</label>
       <input type="text" id="name" name="name" required>
@@ -50,10 +50,75 @@
 
 </main>
 
+<script> 
+document.getElementById('contact-form').addEventListener('submit', async function(event) { 
+
+event.preventDefault();
+
+ const form = event.target;
+
+ // 送信ボタン
+ const button = form.querySelector('button[type="submit"]'); 
+
+// 二重送信防止
+ button.disabled = true;
+ button.textContent = '送信中...';
+
+ // フォームの入力内容を取得 
+const formData = new FormData(form);
+
+ try { 
+
+// 2つのFormspreeへ同時送信
+ const results = await Promise.all([
+
+ fetch('https://formspree.io/f/xdkgaevg', {
+ method: 'POST', 
+body: formData, 
+headers: { 
+'Accept': 'application/json'
+ }
+ }),
+
+ fetch('https://formspree.io/f/xldbzkgb', { 
+method: 'POST',
+ body: formData,
+ headers: {
+ 'Accept': 'application/json'
+ }
+ })
+
+ ]); 
+
+// 2つとも成功した場合
+ if (results[0].ok && results[1].ok) { 
+
+alert('お問い合わせを送信しました。'); 
+
+form.reset(); 
+
+} else {
+
+ alert('送信に失敗しました。お手数ですが、もう一度お試しください。'); 
+
+} 
+
+} catch (error) {
+ alert('通信エラーが発生しました。お手数ですが、もう一度お試しください。'); 
+
+} 
+
+// ボタンを元に戻す
+ button.disabled = false; 
+button.textContent = '送信'; 
+
+}); 
+</script>
+
+
   <footer>
     &copy; 2025-2026 宇部南ベースボールクラブ
   </footer>
 
 </body>
 </html>
-
