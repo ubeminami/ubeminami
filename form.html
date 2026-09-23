@@ -31,7 +31,7 @@
 
 <main class="form-page">
   <h2>体験練習申込みフォーム</h2>
-<form id="contact-form" action="https://formspree.io/f/xldbzkgb" method="POST" onsubmit="return validateContactForm()">
+<form id="contact-form">
     
     <fieldset style="border: none; padding: 0;">
       <legend style="font-weight: bold; margin-bottom: 10px;">保護者氏名</legend>
@@ -96,18 +96,73 @@
 </form>
 
 <script>
-function validateContactForm() {
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
+ document.getElementById('contact-form').addEventListener('submit', async function(event) { 
+event.preventDefault(); 
+const form = event.target; 
+const email = document.getElementById('email').value.trim();
+ const phone = document.getElementById('phone').value.trim(); 
+// メールアドレス・電話番号のどちらか一方を必須
+ if (email === '' && phone === '') { 
+alert('メールアドレスか電話番号のどちらか一方を必ずご入力ください。'); 
+return;
+ } 
+// 送信ボタンを取得
+ const button = form.querySelector('button[type="submit"]'); 
 
-  if (email === '' && phone === '') {
-    alert('メールアドレスか電話番号のどちらか一方を必ずご入力ください。');
-    return false;  
-  }
+// 二重送信防止
+ button.disabled = true; 
+button.textContent = '送信中...'; 
+// フォームの入力内容を取得
+ const formData = new FormData(form);
 
-  return true;  
+ try {
+
+ // 2つのFormspreeへ同時送信
+ const results = await Promise.all([
+ fetch('https://formspree.io/f/xdkgaevg', {
+ method: 'POST',
+ body: formData, 
+headers: { 
+'Accept': 'application/json'
+ } 
+}), 
+
+fetch('https://formspree.io/f/xldbzkgb', {
+ method: 'POST', 
+body: formData,
+ headers: {
+ 'Accept': 'application/json'
+ } 
+}) 
+
+]);
+
+ // 2つとも成功した場合
+ if (results[0].ok && results[1].ok) {
+
+ alert('体験練習のお申し込みを送信しました。');
+
+ form.reset();
+
+ } else {
+
+ alert('送信に失敗しました。お手数ですが、もう一度お試しください。'); 
+
 }
-</script>
+
+ } catch (error) { 
+
+alert('通信エラーが発生しました。お手数ですが、もう一度お試しください。');
+
+ }
+
+ // ボタンを元に戻す
+ button.disabled = false;
+ button.textContent = '送信'; 
+
+});
+
+ </script>
 
 </main>
 
@@ -117,4 +172,3 @@ function validateContactForm() {
 
 </body>
 </html>
-
